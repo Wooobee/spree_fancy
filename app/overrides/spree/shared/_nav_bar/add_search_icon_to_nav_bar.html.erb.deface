@@ -1,2 +1,1 @@
-<!-- remove '#search-bar' -->
-<a href="#"><i class="icon-search"></i></a>
+<!-- insert_top '#search-bar' -->
