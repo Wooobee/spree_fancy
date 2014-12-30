@@ -1,3 +1,0 @@
-<!-- disabled -->
-cut '[data-hook="cart_form"]'
-insert_before '[data-hook="product_description"]'
