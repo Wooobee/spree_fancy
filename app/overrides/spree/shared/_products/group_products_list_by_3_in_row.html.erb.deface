@@ -3,7 +3,7 @@
   <% if products.respond_to? :results %>
      <% products.results.in_groups_of(3, false).each do |product_row| %>
   <% else %>
-    <% <% products.in_groups_of(3, false).each do |product_row| %>
+    <% products.in_groups_of(3, false).each do |product_row| %>
   <%end%>
     <li class="product-row">
       <ul>
