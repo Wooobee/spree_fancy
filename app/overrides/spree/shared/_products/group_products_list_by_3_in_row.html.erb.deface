@@ -1,6 +1,10 @@
 <!-- replace 'ul#products' -->
 <ul id="products" class="inline product-listing" data-hook>
-   <% products.results.in_groups_of(3, false).each do |product_row| %>
+  <% if resource.respond_to? :phone_number %>
+     <% products.results.in_groups_of(3, false).each do |product_row| %>
+  <% else %>
+    <% <% products.in_groups_of(3, false).each do |product_row| %>
+  <%end%>
     <li class="product-row">
       <ul>
         <% product_row.each do |product| %>
