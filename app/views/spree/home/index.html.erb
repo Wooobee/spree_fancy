@@ -5,9 +5,9 @@
 <div id="welcome-message">
   <div class="container">
     <h1>
-      Welcome to our amazing store!
+      Willkommen im Online-Shop von <a href="" target="_blank">Altmanndental!</a>
       <br>
-      Choose <a href="/products">anything</a> you wish, we’ll ship it <a href="/products">anywhere!</a>
+      Bei uns finden Sie <a href="/products">alles</a>, sowhol für Ihre <a href="t/praxis">Praxis</a> als auch Ihr <a href="t/labor">Labor</a>.
     </h1>
   </div>
 </div>
@@ -15,7 +15,7 @@
 <div class="container">
   <% if @featured_products %>
     <div id="featured-products" class="row">
-      <h3>Featured Products</h3>
+      <h3>Angebote</h3>
       <hr>
       <ul class="carousel">
         <% @featured_products.each do |product| %>
@@ -27,7 +27,7 @@
 
   <% if @latest_products %>
     <div id="latest-products" class="row">
-      <h3>Latest Products</h3>
+      <h3>Unsere neusten Produkte</h3>
       <hr>
       <ul class="carousel">
         <% @latest_products.sort_by{ |product| product.created_at }.reverse.each do |product| %>
