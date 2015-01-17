@@ -4,9 +4,9 @@
   <div id="subheader">
     <div class="container">
       <div class="subheader-wrapper">
-        <%= breadcrumbs(@taxon) %>
+        <%= breadcrumbs(@taxon, @product) %>
         <%=  @taxon.to_json %>
-        <%=  @product.taxons.to_json %>
+        
         <%= yield :subheader %>
       </div>
     </div>
