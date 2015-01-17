@@ -5,7 +5,8 @@
     <div class="container">
       <div class="subheader-wrapper">
         <%= breadcrumbs(@taxon) %>
-        <%= breadcrumbs(@product.taxons) %>
+        <%=  @taxon.to_json %>
+        <%=  @product.to_json %>
         <%= yield :subheader %>
       </div>
     </div>
