@@ -4,6 +4,7 @@
   <div id="subheader">
     <div class="container">
       <div class="subheader-wrapper">
+      Test
         <%= yield :subheader %>
       </div>
     </div>
