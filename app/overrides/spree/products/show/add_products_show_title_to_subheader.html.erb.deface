@@ -2,6 +2,6 @@
 <% content_for :subheader do %> 
   <%= breadcrumbs(@taxon, @product) %>
 	<% tempProp = @product_properties.index_by(&:property_id)%>
-	
-  <h1 class="product-title" itemprop="name"><%= accurate_title %> Marke: <%= tempProp[1].value %></h1>
+	<%= @product.to_json %>
+  <h1 class="product-title" itemprop="name"><%= tempProp[1].value %> - <%= accurate_title %></h1>
 <% end %>
