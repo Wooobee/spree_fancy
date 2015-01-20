@@ -1,5 +1,5 @@
 <!-- replace_contents '#taxonomies' -->
-
+<h6 class='taxonomy-root'>Manu</h6>
 <% @taxonomies.each do |taxonomy| %>
   <% unless taxonomy.name == 'Tags' %>
     <h6 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></h6>
