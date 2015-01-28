@@ -1,5 +1,8 @@
 <!-- replace_contents '#taxonomies' -->
-<h6 class='taxonomy-root'>Manu</h6>
+<h6 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => 'Angeboten') %></h6>
+<ul class="taxons-list">
+  <li><%= link_to Spree.t(:actual_sale), products_path %></li>
+</ul>
 <% @taxonomies.each do |taxonomy| %>
   <% unless taxonomy.name == 'Tags' %>
     <h6 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></h6>
