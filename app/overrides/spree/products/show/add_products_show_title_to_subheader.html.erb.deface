@@ -1,5 +1,5 @@
 <!-- replace 'h1.product-title' -->
-<!-- sequence :after => 'add_subheader_to_layout' -->
+
 <% content_for :subheader do %> 
   <%= breadcrumbs(@taxon, @product) %>
 	<% tempProp = @product_properties.index_by(&:property_id)%>
