@@ -16,7 +16,7 @@
               <%end%>
             </div>
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-            <span class="price-list" ><%= number_to_currency(product.list_price) %> </span>
+            <span class="price-list" ><%= number_to_currency(product.list_price, locale: :de) %> </span>
             <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
           </li>
         <% end %>
@@ -39,7 +39,7 @@
                 <%end%>
               </div>
               <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-              <span class="price-list" ><%= number_to_currency(product.list_price) %> </span>
+              <span class="price-list" ><%= number_to_currency(product.list_price, locale: :de) %> </span>
               <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
             </li>
           <% end %>
