@@ -11,12 +11,12 @@
               <% if product.property('sale') == 'true' %>
                 <div class="product-on-sale">sale</div>
               <%end%>
-              <% if product.property('list-price').length > 0 %>
+              <% if product.list_price.length > 0 %>
                 <div class="product-list-price"> -16% </div>
               <%end%>
             </div>
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-            <span class="price-list" ><%= product.property('list-price') %></span>
+            <span class="price-list" ><%= product.list_price %></span>
             <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
           </li>
         <% end %>
@@ -34,12 +34,12 @@
                 <% if product.property('sale') == 'true' %>
                   <div class="product-on-sale">sale</div>
                 <%end%>
-                <% if product.property('list-price').length > 0 %>
+                <% if product.list_price.length > 0 %>
                   <div class="product-list-price"> -16% </div>
                 <%end%>
               </div>
               <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-              <span class="price-list" ><%= product.property('list-price') %></span>
+              <span class="price-list" ><%= product.list_price %></span>
               <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
             </li>
           <% end %>
