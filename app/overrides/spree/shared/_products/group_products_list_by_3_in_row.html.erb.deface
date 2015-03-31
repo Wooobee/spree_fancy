@@ -12,7 +12,7 @@
                 <div class="product-on-sale">sale</div>
               <%end%>
               <% if product.list_price.length > 0 %>
-                <div class="product-list-price"> - <%= 1- %> </div>
+                <div class="product-list-price"> </div>
               <%end%>
             </div>
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
