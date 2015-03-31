@@ -11,7 +11,9 @@
               <% if product.property('sale') == 'true' %>
                 <div class="product-on-sale">sale</div>
               <%end%>
-              <div class="product-list-price"> -16% </div>
+              <% if product.property('list-price').length > 0 %>
+                <div class="product-list-price"> -16% </div>
+              <%end%>
             </div>
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
             <span class="price-list" ><%= product.property('list-price') %></span>
@@ -32,7 +34,9 @@
                 <% if product.property('sale') == 'true' %>
                   <div class="product-on-sale">sale</div>
                 <%end%>
-                <div class="product-list-price"> -16% </div>
+                <% if product.property('list-price').length > 0 %>
+                  <div class="product-list-price"> -16% </div>
+                <%end%>
               </div>
               <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
               <span class="price-list" ><%= product.property('list-price') %></span>
