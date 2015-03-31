@@ -11,7 +11,7 @@
               <% if product.property('sale') == 'true' %>
                 <div class="product-on-sale">sale</div>
               <%end%>
-              <% if product.list_price.length > 0 %>
+              <% if not product.list_price.nil? %>
                 <div class="product-list-price"> </div>
               <%end%>
             </div>
@@ -34,7 +34,7 @@
                 <% if product.property('sale') == 'true' %>
                   <div class="product-on-sale">sale</div>
                 <%end%>
-                <% if product.list_price.length > 0 %>
+                <% if not product.list_price.nil? %>
                   <div class="product-list-price"> -16% </div>
                 <%end%>
               </div>
