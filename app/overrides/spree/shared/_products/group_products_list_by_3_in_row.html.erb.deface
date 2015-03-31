@@ -12,7 +12,7 @@
                 <div class="product-on-sale">sale</div>
               <%end%>
               <% if not product.list_price.nil? %>
-                <div class="product-list-price"> - <%= (1 - product.price / product.list_price.to_f)*100.to_i  %>%  </div>
+                <div class="product-list-price"> - <%= (1 - product.price / product.list_price.to_f)*100.round  %>%  </div>
               <%end%>
             </div>
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
@@ -35,7 +35,7 @@
                   <div class="product-on-sale">sale</div>
                 <%end%>
                 <% if not product.list_price.nil? %>
-                  <div class="product-list-price"> - <%= (1 - product.price / product.list_price.to_f)*100.to_i  %>% </div>
+                  <div class="product-list-price"> - <%= (1 - product.price / product.list_price.to_f)*100.round  %>% </div>
                 <%end%>
               </div>
               <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
