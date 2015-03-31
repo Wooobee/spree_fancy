@@ -35,11 +35,11 @@
                   <div class="product-on-sale">sale</div>
                 <%end%>
                 <% if not product.list_price.nil? %>
-                  <div class="product-list-price"> -16% </div>
+                  <div class="product-list-price"> - <%= 1 - product.display_price / product.list_price  %> </div>
                 <%end%>
               </div>
               <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-              <span class="price-list" ><%= product.list_price %> <%= product.display_price %> </span>
+              <span class="price-list" ><%= product.list_price %> </span>
               <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
             </li>
           <% end %>
