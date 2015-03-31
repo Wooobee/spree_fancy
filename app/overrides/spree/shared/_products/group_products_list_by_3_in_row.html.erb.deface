@@ -11,14 +11,15 @@
               <% if product.property('sale') == 'true' %>
                 <div class="product-on-sale">sale</div>
               <%end%>
+              <div class="product-list-price"> -16% </div>
             </div>
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-            <span class="price-list" >12,50</span>
+            <span class="price-list" ><%= product.property('list-price') %></span>
             <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
           </li>
         <% end %>
       </ul>
-    </li>
+    </li> 
   <% end %>
   <% else %>
     <% products.in_groups_of(3, false).each do |product_row| %>
@@ -31,9 +32,10 @@
                 <% if product.property('sale') == 'true' %>
                   <div class="product-on-sale">sale</div>
                 <%end%>
+                <div class="product-list-price"> -16% </div>
               </div>
               <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-              <span class="price-list" >12,50</span>
+              <span class="price-list" ><%= product.property('list-price') %></span>
               <span class="price selling" itemprop="price"><%= product.price_in(current_currency).display_price %></span>
             </li>
           <% end %>
